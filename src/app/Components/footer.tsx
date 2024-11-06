@@ -8,10 +8,11 @@ export default function Footer() {
     return (
         <main className="flex justify-center">
             <footer className="w-full bg-[#121212] text-white">
-                <div className="px-8 py-12 lg:px-16">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-                        {/* Column 1 - First div */}
-                        <div className="space-y-4 text-center lg:text-left">
+                <div id="parent" className="py-12 ml-10 mr-10 justify-center">
+                    <div id="columns" className= " grid grid-cols-1 sm:grid-cols-2 md:ml-24 md:mr-24  xl:-ml-0 xl:-mr-0 lg:grid-cols-4 gap-48 place-items-center"> 
+                        
+                        {/* Column 1 */}
+                        <div className="space-y-4 text-center lg:text-left min-w-[250px] max-w-[300px]">
                             <h2 className="text-xl text-orange-600 cursor-pointer">My Portfolio</h2>
                             <p>
                                 OurStudio is a digital agency <br />
@@ -23,7 +24,7 @@ export default function Footer() {
                         </div>
 
                         {/* Column 2 */}
-                        <div className="space-y-2 text-center lg:text-left">
+                        <div className="space-y-2 text-center lg:text-left min-w-[250px] max-w-[300px]">
                             <h2 className="text-xl text-orange-600 cursor-pointer">Services</h2>
                             <p>Illustration</p>
                             <p>Mobile Design</p>
@@ -34,7 +35,7 @@ export default function Footer() {
                         </div>
 
                         {/* Column 3 */}
-                        <div className="space-y-2 text-center lg:text-left">
+                        <div className="space-y-2 text-center lg:text-left min-w-[250px] max-w-[300px]">
                             <h2 className="text-xl text-orange-600 cursor-pointer">Company</h2>
                             <p>Service</p>
                             <p>Feature</p>
@@ -45,12 +46,12 @@ export default function Footer() {
                         </div>
 
                         {/* Column 4 */}
-                        <div className="text-center lg:text-left">
+                        <div className="text-center lg:text-left min-w-[250px] max-w-[300px]">
                             <h2 className="text-xl text-orange-600 cursor-pointer">Join a Newsletter</h2>
                             <label htmlFor="name" className="text-white font-bold">
                                 Your Email
                             </label>
-                            <div className="flex justify-center lg:justify-start gap-5">
+                            <div className="flex justify-center lg:justify-start gap-5 mt-2">
                                 <input
                                     type="text"
                                     id="email"
@@ -60,12 +61,12 @@ export default function Footer() {
                                 />
                                 <button
                                     type="submit"
-                                    className="w-40 text-white font-semibold py-3 px-9 bg-orange-600 hover:bg-white hover:text-orange-600 rounded-lg"
+                                    className="w-24 text-white font-semibold py-3 bg-orange-600 hover:bg-white hover:text-orange-600 rounded-lg"
                                 >
                                     Submit
                                 </button>
                             </div>
-                            <div className="flex justify-center lg:justify-start gap-10 mt-4">
+                            <div className="flex justify-center gap-10 mt-4">
                                 <a href="https://www.linkedin.com/company/naseer-studio/" target="_blank">
                                     <TiSocialLinkedinCircular className="w-12 h-12 scale-110 hover:scale-150 fill-orange-600" />
                                 </a>
