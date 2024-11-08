@@ -51,13 +51,13 @@ const Hero = () => {
             <Link href="https://www.linkedin.com/in/naseer-ahmed-wighio-a20453285/">
               <TiSocialLinkedinCircular
                 title="LinkedIn"
-                className="w-8 h-8 sm:w-12 sm:h-12 text-white hover:text-orange-600"
+                className="w-10 h-10 sm:w-12 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://discord.com/">
               <AiOutlineDiscord
                 title="Discord"
-                className="w-8 h-8 sm:w-12 sm:h-12 text-white hover:text-orange-600"
+                className="w-9 h-9 sm:w-12 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://www.facebook.com/naseer.ahmed.3993">
@@ -69,7 +69,7 @@ const Hero = () => {
             <Link href="https://vercel.com/naseerahmedwighios-projects">
               <IoTriangleOutline
                 title="Instagram"
-                className="w-8 h-8 mt-[2px] sm:w-10 sm:h-10 text-white hover:text-orange-600"
+                className="w-7 h-7 mt-[2px] sm:w-10 sm:h-10 text-white hover:text-orange-600"
               />
             </Link>
           </div>
