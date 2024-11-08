@@ -51,7 +51,7 @@ export default function Services() {
             <div className="w-full h-auto bg-[#121212]">
                 <div className="space-y-4 text-center">
                     <h1 className="text-3xl font-semibold text-white">Services</h1>
-                    <p className="font-thin opacity-50 text-white">
+                    <p className="font-thin opacity-50 text-white ">
                         We providing more services like Web Development, Graphics Designing, UI and UX Designing, Mobile Application and SEO.
                     </p>
                 </div>
@@ -65,7 +65,7 @@ export default function Services() {
                                 </div>
                                 <h2 className="text-[#FD6F00] py-10 font-semibold text-2xl">{service.name}</h2>
                             </div>
-                            <div className="opacity-50 px-4 text-center">
+                            <div className="opacity-50 px-4 text-center text-lg text-white">
                                 <p>{service.description}</p>
                             </div>
                         </div>

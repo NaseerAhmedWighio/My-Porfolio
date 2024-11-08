@@ -2,15 +2,15 @@
 export default function Portfolio() {
     return (
         <section id="Portfolio">
-            <div className="w-full h-auto bg-[#121212] px-4 py-20">
+            <div className="w-full h-auto bg-[#121212] px-4 py-16">
                 <div className="space-y-6 text-center">
                     <h1 className="text-3xl font-semibold text-white">Portfolio</h1>
                     <div className="flex flex-nowrap justify-center gap-4 overflow-x-auto">
-                        <button className="px-6 py-3 bg-[#1b1b1b] hover:bg-orange-600 rounded-lg">All</button>
-                        <button className="px-6 py-3 bg-[#1b1b1b] hover:bg-orange-600 rounded-lg">Website Design</button>
-                        <button className="px-6 py-3 bg-[#1b1b1b] hover:bg-orange-600 rounded-lg">App Mobile Design</button>
-                        <button className="px-6 py-3 bg-[#1b1b1b] hover:bg-orange-600 rounded-lg">App Desktop</button>
-                        <button className="px-6 py-3 bg-[#1b1b1b] hover:bg-orange-600 rounded-lg">Braiding</button>
+                        <button className="px-6 py-3 bg-[#1b1b1b] text-white hover:bg-orange-600 rounded-lg">All</button>
+                        <button className="px-6 py-3 bg-[#1b1b1b] text-white hover:bg-orange-600 rounded-lg">Website Design</button>
+                        <button className="px-6 py-3 bg-[#1b1b1b] text-white hover:bg-orange-600 rounded-lg">App Mobile Design</button>
+                        <button className="px-6 py-3 bg-[#1b1b1b] text-white hover:bg-orange-600 rounded-lg">App Desktop</button>
+                        <button className="px-6 py-3 bg-[#1b1b1b] text-white hover:bg-orange-600 rounded-lg">Braiding</button>
                     </div>
 
                 </div>

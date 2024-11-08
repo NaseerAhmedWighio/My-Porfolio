@@ -38,21 +38,21 @@ export default function Header() {
                     {/* Navigation Links (visible on large screens) */}
                     <div className="hidden lg:flex gap-12 text-right">
                         <Link href="/"><h1 className="text-2xl lg:text-xl text-orange-600 hover:text-white">HOME</h1></Link>
-                        <a href='#Services' className="text-2xl lg:text-xl hover:text-orange-600 cursor-pointer">SERVICES</a>
-                        <a href='#About' className="text-2xl lg:text-xl hover:text-orange-600 cursor-pointer">ABOUT ME</a>
-                        <a href="#Portfolio" className="text-2xl lg:text-xl hover:text-orange-600 cursor-pointer">PORTFOLIO</a>
-                        <a href="#Contact" className="text-2xl lg:text-xl hover:text-orange-600 cursor-pointer">CONTACT</a>
+                        <a href='#Services' className="text-2xl lg:text-xl text-white hover:text-orange-600 cursor-pointer">SERVICES</a>
+                        <a href='#About' className="text-2xl lg:text-xl text-white hover:text-orange-600 cursor-pointer">ABOUT ME</a>
+                        <a href="#Portfolio" className="text-2xl lg:text-xl text-white hover:text-orange-600 cursor-pointer">PORTFOLIO</a>
+                        <a href="#Contact" className="text-2xl lg:text-xl text-white hover:text-orange-600 cursor-pointer">CONTACT</a>
                     </div>
 
                     {/* Buttons (visible on large screens) */}
                     <div className="hidden lg:flex gap-4">
                         <Link href="../Signup/">
-                            <button type="button" className="text-center text-xl font-bold py-3 px-6 hover:bg-white hover:text-orange-600 bg-orange-600 rounded-lg">
+                            <button type="button" className="text-center text-xl font-bold py-3 px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg">
                                 Sign Up
                             </button>
                         </Link>
                         <Link href="../Login/">
-                            <button type="button" className="text-center text-xl font-bold py-[7px] px-6 hover:bg-orange-600 hover:text-white border-2 border-orange-600 rounded-lg">
+                            <button type="button" className="text-center text-xl font-bold py-[7px] px-6 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg">
                                 Log In
                             </button>
                         </Link>
@@ -67,17 +67,17 @@ export default function Header() {
                             {/* // onClick={() => setMenuOpen(false)}> */}
                                 <h1 className="text-xl text-orange-600 hover:text-white">Home</h1>
                             </Link>
-                            <a href="#Services"><h1 className="text-lg hover:text-orange-600 cursor-pointer">SERVICES</h1></a>
-                            <a href="#About"><h1 className="text-lg hover:text-orange-600 cursor-pointer">ABOUT ME</h1></a>
-                            <a href="#Portfolio"><h1 className="text-lg hover:text-orange-600 cursor-pointer">PORTFOLIO</h1></a>
-                            <a href="#Contact"><h1 className="text-lg hover:text-orange-600 cursor-pointer">CONTACT</h1></a>
+                            <a href="#Services"><h1 className="text-lg text-white hover:text-orange-600 cursor-pointer">SERVICES</h1></a>
+                            <a href="#About"><h1 className="text-lg text-white hover:text-orange-600 cursor-pointer">ABOUT ME</h1></a>
+                            <a href="#Portfolio"><h1 className="text-lg text-white hover:text-orange-600 cursor-pointer">PORTFOLIO</h1></a>
+                            <a href="#Contact"><h1 className="text-lg text-white hover:text-orange-600 cursor-pointer">CONTACT</h1></a>
                             <Link href="../Signup/" onClick={() => setMenuOpen(false)}>
-                                <button type="button" className="text-center text-xl font-bold py-3 px-6 hover:bg-white hover:text-orange-600 bg-orange-600 rounded-lg">
+                                <button type="button" className="text-center text-xl font-bold py-3 px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg">
                                     Sign Up
                                 </button>
                             </Link>
                             <Link href="../Login/" onClick={() => setMenuOpen(false)}>
-                                <button type="button" className="text-center text-xl font-bold py-2 px-[22px] hover:bg-orange-600 hover:text-white border-2 border-orange-600 rounded-lg">
+                                <button type="button" className="text-center text-xl font-bold py-2 px-[22px] text-white hover:bg-orange-600 hover:text-white border-2 border-orange-600 rounded-lg">
                                     Log In
                                 </button>
                             </Link>
