@@ -15,10 +15,10 @@ import bg3 from "./Public/bg3.jpg";
 const Hero = () => {
   return (
     <main
-      className="w-full h-auto bg-cover bg-center mt-24 opacity-100"
+      className="w-full h-auto bg-cover bg-center mt-20 opacity-100"
       style={{ backgroundImage: `url(${bg3.src})` }}
     ><div>
-      <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-32">
+      <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-28">
         {/* Text Section */}
         <div id="info-text" className="flex flex-col items-center mb-10 lg:mb-0 lg:items-start">
           <div className="text-2xl sm:text-lg md:text-lg xl:text-3xl mb-2 text-center text-white"> <TypeAnimation
