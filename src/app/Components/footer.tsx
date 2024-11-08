@@ -3,6 +3,7 @@ import { PiFacebookLogoBold } from "react-icons/pi";
 import { TiSocialLinkedinCircular } from "react-icons/ti";
 import { AiOutlineDiscord, AiOutlineMail } from "react-icons/ai";
 import { MdOutlineCall, MdOutlineLocationOn } from "react-icons/md";
+import { IoTriangleOutline } from "react-icons/io5"
 
 export default function Footer() {
     return (
@@ -51,11 +52,13 @@ export default function Footer() {
                             <label htmlFor="name" className="text-white font-bold">
                                 Your Email
                             </label>
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="1b097782-f44e-4bf2-b4c5-d733b8b6284a" />
                             <div className="flex justify-center lg:justify-start gap-3 mt-2">
                                 <input
-                                    type="text"
+                                    type="email"
                                     id="email"
-                                    name="Email"
+                                    name="email"
                                     placeholder="Enter Your Email"
                                     className="w-56 p-3 bg-white text-black font-bold rounded-lg focus:ring focus:ring-orange-600"
                                 />
@@ -65,7 +68,7 @@ export default function Footer() {
                                 >
                                     Submit
                                 </button>
-                            </div>
+                            </div></form>
                             <div className="flex justify-center gap-10 mt-4">
                                 <a href="https://www.linkedin.com/company/naseer-studio/" target="_blank">
                                     <TiSocialLinkedinCircular className="w-12 h-12 scale-110 hover:scale-150 fill-orange-600" />
@@ -75,6 +78,12 @@ export default function Footer() {
                                 </a>
                                 <a href="https://www.facebook.com/naseer.ahmed.3993" target="_blank">
                                     <PiFacebookLogoBold className="w-12 h-12 fill-orange-600 hover:scale-150" />
+                                </a>
+                                <a href="https://vercel.com/naseerahmedwighios-projects">
+                                <IoTriangleOutline
+                                    title="Instagram"
+                                    className="w-12 h-12 text-orange-600 hover:scale-150"
+                                />
                                 </a>
                             </div>
                         </div>
