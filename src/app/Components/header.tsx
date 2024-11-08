@@ -30,7 +30,7 @@ export default function Header() {
 
                     {/* Hamburger Menu Icon for Small Screens */}
                     <div className="lg:hidden">
-                        <button onClick={toggleMenu} className="text-3xl text-orange-600">
+                        <button onClick={toggleMenu} className="text-3xl mr-10 md:mr-0 text-orange-600">
                             <Menu />
                         </button>
                     </div>

@@ -34,7 +34,7 @@ const Aboutme = () => {
                         </button></a>
                     </div>
                 </div>
-                <div className="flex justify-between lg:justify-between mx-auto max-w-8xl mt-10 px-6 lg:px-0">
+                <div className="flex justify-between lg:justify-between mx-auto max-w-8xl mt-10">
                     {[figma, xd, photoshop, illustrator, premiere].map((icon, index) => (
                         <Image key={index} src={icon} className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40" alt="logo" />
                     ))}
