@@ -2,7 +2,7 @@
 import bg3 from "@/app/Public/bg3.jpg"
 import Link from "next/link"
 
-export default function Signup() {
+const Signup = () => {
     return (
         <main>
             <div className="flex items-center justify-center w-full h-screen" style={{ backgroundImage: `url(${bg3.src})`, backgroundSize: 'cover' }}>
@@ -77,3 +77,5 @@ export default function Signup() {
         </main>
     )
 }
+
+export default Signup
