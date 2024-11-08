@@ -55,7 +55,7 @@
 
 
 
-"use client"
+// "use client"
 import Link from "next/link"
 // import Image from "next/image"
 import bg3 from "@/app/Public/bg3.jpg"
@@ -116,3 +116,5 @@ export default function Login() {
         </main>
     )
 }
+
+// export default Login

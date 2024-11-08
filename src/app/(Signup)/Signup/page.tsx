@@ -81,15 +81,13 @@
 // export default Signup
 
 
-
-
-
-"use client"
+// "use client"
 import bg3 from "@/app/Public/bg3.jpg"
 import Link from "next/link"
 
 const Signup = () => {
     return (
+
         <main>
             <div className="flex items-center justify-center w-full min-h-screen mt-16" style={{ backgroundImage: `url(${bg3.src})`, backgroundSize: 'cover' }}>
                 <div className="flex flex-col items-center justify-center w-full mt-5 max-w-md p-6 bg-slate-300 rounded-xl shadow-lg space-y-6">
