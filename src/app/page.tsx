@@ -51,13 +51,13 @@ const Hero = () => {
             <Link href="https://www.linkedin.com/in/naseer-ahmed-wighio-a20453285/">
               <TiSocialLinkedinCircular
                 title="LinkedIn"
-                className="w-10 h-10 sm:w-12 sm:h-12 text-white hover:text-orange-600"
+                className="w-11 h-11 sm:w-14 sm:mb-2 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://discord.com/">
               <AiOutlineDiscord
                 title="Discord"
-                className="w-9 h-9 sm:w-12 sm:h-12 text-white hover:text-orange-600"
+                className="w-9 h-9 sm:w-12 sm:mb-1 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://www.facebook.com/naseer.ahmed.3993">
@@ -82,13 +82,13 @@ const Hero = () => {
             >
               Hire me
             </button>
-            <a href="./Public/Resume.pdf" download>
+            <Link href="./Resume.pdf" download>
             <button
               type="button"
               className="text-xl font-bold py-3 px-6 sm:px-8 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
             >
               Download CV
-            </button></a>
+            </button></Link>
           </div>
 
           {/* Experience Section */}

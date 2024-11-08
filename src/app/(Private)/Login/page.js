@@ -99,14 +99,14 @@ export default function Login() {
                         </div>
                         <button
                             type="button"
-                            className="w-full bg-blue-700 py-3 font-bold text-2xl text-white hover:bg-white hover:text-blue-700 rounded-lg transition-colors"
+                            className="w-full bg-blue-700 py-3 font-bold text-xl text-white hover:bg-white hover:text-blue-700 rounded-lg transition-colors"
                         >
                             Log In
                         </button>
                     </form>
                     <div className="h-[0.5px] w-full bg-black opacity-50"></div>
                     <Link href="../Signup/">
-                        <h2 className="block w-full text-center bg-blue-700 py-3 px-[115px] mt-5 text-2xl font-bold text-white hover:bg-white hover:text-blue-700 rounded-lg transition-colors">
+                        <h2 className="block w-full text-center bg-blue-700 py-3 px-[115px] mt-5 text-xl font-bold text-white hover:bg-white hover:text-blue-700 rounded-lg transition-colors">
                             Sign Up
                         </h2>
                     </Link>

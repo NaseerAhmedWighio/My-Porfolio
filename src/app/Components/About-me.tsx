@@ -28,7 +28,7 @@ const Aboutme = () => {
                             A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code.
                         </p>
                         <br/>
-                        <a href="../Public/Resume.pdf" download ><button type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg flex items-center justify-between">
+                        <a href="./Resume.pdf" download ><button type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg flex items-center justify-between">
                             Download CV
                             <IoIosArrowDown className="ml-4" />
                         </button></a>
