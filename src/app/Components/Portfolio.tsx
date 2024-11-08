@@ -2,7 +2,7 @@
 export default function Portfolio() {
     return (
         <section id="Portfolio">
-            <div className="w-full h-auto bg-[#121212] px-4 py-16">
+            <div className="w-full h-auto bg-[#121212] px-4 py-12">
                 <div className="space-y-6 text-center">
                     <h1 className="text-3xl font-semibold text-white">Portfolio</h1>
                     <div className="flex flex-wrap justify-center gap-4 overflow-x-auto">

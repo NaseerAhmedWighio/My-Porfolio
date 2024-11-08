@@ -51,7 +51,7 @@ export default function Footer() {
                             <label htmlFor="name" className="text-white font-bold">
                                 Your Email
                             </label>
-                            <div className="flex justify-center lg:justify-start gap-5 mt-2">
+                            <div className="flex justify-center lg:justify-start gap-3 mt-2">
                                 <input
                                     type="text"
                                     id="email"
@@ -61,7 +61,7 @@ export default function Footer() {
                                 />
                                 <button
                                     type="submit"
-                                    className="w-24 text-white font-semibold py-3 bg-orange-600 hover:bg-white hover:text-orange-600 rounded-lg"
+                                    className="w-28 md:w-24 text-white font-semibold py-3 bg-orange-600 hover:bg-white hover:text-orange-600 rounded-lg"
                                 >
                                     Submit
                                 </button>
@@ -87,8 +87,8 @@ export default function Footer() {
                             <h4>Copyright Naseer Studio</h4>
                         </a>
                         <a className="flex items-center gap-2">
-                            <MdOutlineLocationOn className="scale-150 fill-orange-600" />
-                            <h4>Sector-S, Gulshan E Maymaar, Karachi.</h4>
+                            <MdOutlineLocationOn className="h-9 w-8 md:h-7 md:w-7 fill-orange-600" />
+                            <h4 className="text-center">Sector-S, Gulshan E Maymaar, Karachi.</h4>
                         </a>
                         <a className="flex items-center gap-2">
                             <AiOutlineMail className="scale-150 fill-orange-600" />

@@ -20,7 +20,7 @@ export default function Header() {
         setMenuOpen(!menuOpen); // Toggle the menu
     }
     return (
-        <header className='fixed top-0 w-full'>
+        <header className='fixed top-0 w-screen'>
             <nav className="w-full bg-[#121212]">
                 <div className="flex items-center justify-between px-6 py-6 lg:px-10">
                     {/* Logo */}
@@ -30,7 +30,7 @@ export default function Header() {
 
                     {/* Hamburger Menu Icon for Small Screens */}
                     <div className="lg:hidden">
-                        <button onClick={toggleMenu} className="text-3xl mr-10 md:mr-0 text-orange-600">
+                        <button onClick={toggleMenu} className="text-3xl mr-3 md:mr-0 text-orange-600">
                             <Menu />
                         </button>
                     </div>
