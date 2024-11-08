@@ -51,7 +51,7 @@ const Hero = () => {
             <Link href="https://www.linkedin.com/in/naseer-ahmed-wighio-a20453285/">
               <TiSocialLinkedinCircular
                 title="LinkedIn"
-                className="w-10 h-10 sm:w-12 sm:mb-2 sm:h-12 text-white hover:text-orange-600"
+                className="w-9 h-9 sm:w-12 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://discord.com/">
@@ -92,21 +92,21 @@ const Hero = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[550px] lg:h-48">
-            <div className="flex justify-between items-center space-x-5 ml-6 mr-6">
-              <div className="text-center">
+          <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[450px] lg:h-48 scale-90 md:scale-100">
+            <div className="flex justify-center items-center gap-10 ml-4 mr-4 text-lg md:text-xl">
+              <div className="justify-start text-center">
                 <h1 className="text-yellow-500 text-3xl font-semibold">5+</h1>
-                <p className="text-xl text-white">Experiences</p>
+                <p className="text-white">Experiences</p>
               </div>
               <div className="w-[0.5px] h-36 opacity-70 bg-white"></div>
               <div className="text-center">
                 <h1 className="text-yellow-500 text-3xl font-semibold">20+</h1>
-                <p className="text-xl text-white">Projects done</p>
+                <p className=" text-white">Projects done</p>
               </div>
               <div className="w-[0.5px] h-36 opacity-70 bg-white"></div>
               <div className="text-center">
                 <h1 className="text-yellow-500 text-3xl font-semibold">80+</h1>
-                <p className="text-xl text-white">Happy Clients</p>
+                <p className=" text-white">Happy Clients</p>
               </div>
             </div>
           </div>
