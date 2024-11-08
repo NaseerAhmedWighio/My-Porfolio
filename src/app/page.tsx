@@ -51,13 +51,13 @@ const Hero = () => {
             <Link href="https://www.linkedin.com/in/naseer-ahmed-wighio-a20453285/">
               <TiSocialLinkedinCircular
                 title="LinkedIn"
-                className="w-11 h-11 sm:w-14 sm:mb-2 sm:h-12 text-white hover:text-orange-600"
+                className="w-10 h-10 sm:w-12 sm:mb-2 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://discord.com/">
               <AiOutlineDiscord
                 title="Discord"
-                className="w-9 h-9 sm:w-12 sm:mb-1 sm:h-12 text-white hover:text-orange-600"
+                className="w-9 h-9 sm:w-12 sm:mb-2 sm:h-12 text-white hover:text-orange-600"
               />
             </Link>
             <Link href="https://www.facebook.com/naseer.ahmed.3993">
@@ -92,7 +92,7 @@ const Hero = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-full lg:w-[550px] lg:h-48">
+          <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[550px] lg:h-48">
             <div className="flex justify-between items-center space-x-5 ml-6 mr-6">
               <div className="text-center">
                 <h1 className="text-yellow-500 text-3xl font-semibold">5+</h1>

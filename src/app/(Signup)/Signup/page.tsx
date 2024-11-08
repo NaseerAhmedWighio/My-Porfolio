@@ -91,10 +91,10 @@ import Link from "next/link"
 const Signup = () => {
     return (
         <main>
-            <div className="flex items-center justify-center w-full min-h-screen" style={{ backgroundImage: `url(${bg3.src})`, backgroundSize: 'cover' }}>
+            <div className="flex items-center justify-center w-full min-h-screen mt-16" style={{ backgroundImage: `url(${bg3.src})`, backgroundSize: 'cover' }}>
                 <div className="flex flex-col items-center justify-center w-full mt-5 max-w-md p-6 bg-slate-300 rounded-xl shadow-lg space-y-6">
                     <h1 className="text-2xl font-extrabold text-gray-700 text-center">Create an Account</h1>
-                    <form className="space-y-4 w-full">
+                    <form className="space-y-3 w-full">
                         <div className="flex flex-col">
                             <label htmlFor="FirstName" className="text-gray-700 font-bold">First Name</label>
                             <input
