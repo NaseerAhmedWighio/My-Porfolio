@@ -92,7 +92,7 @@ const Hero = () => {
           </div>
 
           {/* Experience Section */}
-          <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[450px] lg:h-48 scale-90 md:scale-100">
+          <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[450px] lg:h-48 scale-75 sm:scale-90 md:scale-100">
             <div className="flex justify-center items-center gap-10 ml-4 mr-4 text-lg md:text-xl">
               <div className="justify-start text-center">
                 <h1 className="text-yellow-500 text-3xl font-semibold">5+</h1>
