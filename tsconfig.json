@@ -19,8 +19,9 @@
     ],
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["@mui/material"]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(Signup)/Signup/page.tsx", "src/app/(Private)/Login/page.js", "src/app/(Private)/layout.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(Signup)/Signup/page.tsx", "src/app/(Private)/Login/page.js", "src/app/(Private)/layout.tsx", "src/app/Components/HireContext.js"],
   "exclude": ["node_modules"]
 }

@@ -27,6 +27,8 @@ yarn-error.log*
 
 # local env files
 .env*.local
+src/app/(Private)
+src/app/(Signup)
 
 # vercel
 .vercel

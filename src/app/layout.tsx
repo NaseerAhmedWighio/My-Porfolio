@@ -3,10 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/app/Components/header";
 import Footer from "@/app/Components/footer"
-import Services from "@/app/Components/Services"
-import Aboutme from "./Components/About-me";
-import Portfolio from "./Components/Portfolio"
-import Contact from "./Components/Contact"
+import { HireProvider } from "./Components/HireContext";
 
 
 const geistSans = localFont({
@@ -36,12 +33,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+         <HireProvider>
         <Header />
         {children}
-        <Services/>
-        <Aboutme/>
-        <Portfolio/>
-        <Contact />
+        </HireProvider>
         <Footer />
       </body>
     </html>

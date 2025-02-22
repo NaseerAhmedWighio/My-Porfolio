@@ -42,6 +42,19 @@ body {
   }
 }
 
+/* .swiper-button-prev, 
+.swiper-button-next {
+  width: 25px !important; 
+  height: 25px !important;
+  color: #999 !important; 
+} */
+
+/* .swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important; 
+} */
+
+
 
 @layer base {
   :root {
@@ -115,7 +128,7 @@ body {
   }
 }
 
-
+/* 
 @layer base {
   * {
     @apply border-border;
@@ -123,4 +136,4 @@ body {
   body {
     @apply bg-background text-foreground;
   }
-}
+} */
