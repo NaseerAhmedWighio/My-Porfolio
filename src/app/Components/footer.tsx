@@ -90,7 +90,7 @@ export default function Footer() {
                     </div>
 
                     <div className="w-full h-[0.5px] bg-orange-600 mt-6" />
-                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center text-lg mt-3 space-y-2 md:space-y-0">
+                    <div className="flex flex-col md:flex-row justify-center md:justify-between items-center text-base md:text-lg mt-3 space-y-2 md:space-y-0">
 
                             <div className="flex flex-col lg:hidden items-center md:items-start space-y-2">
                                 <a className="flex items-center md:items-start gap-2">

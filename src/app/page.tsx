@@ -19,10 +19,15 @@ import { useHireState } from "./Components/HireContext";
 const Hero = () => {
   const { isOpen, setIsOpen } = useHireState();
 
-  const handleDownloadCV = () => {
-    window.open("./Resume.pdf", "_blank");
-  };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "./Resume.pdf";
+    link.setAttribute("download", "Resume.pdf"); // Set download attribute
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link); // Clean up
+  };
 
   return (
     <>
@@ -145,8 +150,8 @@ const Hero = () => {
       <div>
         {/* Popup Modal */}
         {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 mx-5">
-            <div className="bg-[#121212] opacity-80 p-6 rounded-lg shadow-lg max-w-xl w-full">
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50 scale-75 md:scale-90 lg:scale-100">
+            <div className="bg-[#121212] opacity-90 p-6 rounded-lg shadow-lg max-w-xl w-full">
               {/* Modal Content */}
               <h2 className="text-xl font-bold mb-2 text-white">{`Let's Work Together!`}</h2>
               <p className="text-white mb-4">

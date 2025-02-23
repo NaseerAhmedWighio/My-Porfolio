@@ -15,8 +15,14 @@ import CircularProgressCountUp from '@/components/ui/CircularProgressCountUp';
 const Aboutme = () => {
     const [value, setValue] = React.useState(0);
 
+
     const handleDownloadCV = () => {
-        window.open("./Resume.pdf", "_blank");
+        const link = document.createElement("a");
+        link.href = "./Resume.pdf";
+        link.setAttribute("download", "Resume.pdf"); // Set download attribute
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up
       };
 
     React.useEffect(() => {
