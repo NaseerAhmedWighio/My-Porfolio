@@ -17,7 +17,13 @@ import Services from "./Components/Services";
 import { useHireState } from "./Components/HireContext";
 
 const Hero = () => {
-  const { isOpen, setIsOpen } = useHireState(); 
+  const { isOpen, setIsOpen } = useHireState();
+
+  const handleDownloadCV = () => {
+    window.open("./Resume.pdf", "_blank");
+  };
+
+
   return (
     <>
       <main
@@ -83,38 +89,38 @@ const Hero = () => {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-6">
-              <button
+                <button
                   onClick={() => setIsOpen(true)}
                   type="button"
                   className="text-xl font-bold py-3 px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg"
                 >
                   Hire me
                 </button>
-                <Link href="./Resume.pdf" download>
-                  <button
-                    type="button"
-                    className="text-xl font-bold py-3 px-6 sm:px-8 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
-                  >
-                    Download CV
-                  </button></Link>
+                <button
+                  type="button"
+                  className="text-xl font-bold py-3 px-6 sm:px-8 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
+                  onClick={handleDownloadCV} // Use onClick handler
+                >
+                  Download CV
+                </button>
               </div>
 
               {/* Experience Section */}
               <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[450px] lg:h-48 scale-75 sm:scale-90 md:scale-100">
                 <div className="flex justify-center items-center gap-10 ml-4 mr-4 text-lg md:text-xl">
-                  <div className="justify-start text-center">
-                    <h1 className="text-yellow-500 text-3xl font-semibold">5+</h1>
-                    <p className="text-white">Experiences</p>
+                  <div className="">
+                    <h1 className="text-yellow-500 text-xl md:text-3xl font-semibold text-center lg:text-left">5+</h1>
+                    <p className="text-[12px] md:text-[16px] text-center text-white whitespace-nowrap">Experiences</p>
                   </div>
                   <div className="w-[0.5px] h-36 opacity-70 bg-white"></div>
-                  <div className="text-center">
-                    <h1 className="text-yellow-500 text-3xl font-semibold">20+</h1>
-                    <p className=" text-white">Projects done</p>
+                  <div className="">
+                    <h1 className="text-yellow-500 text-xl md:text-3xl font-semibold text-center lg:text-left">20+</h1>
+                    <p className="text-[12px] md:text-[16px] text-center text-white whitespace-nowrap">Projects done</p>
                   </div>
                   <div className="w-[0.5px] h-36 opacity-70 bg-white"></div>
-                  <div className="text-center">
-                    <h1 className="text-yellow-500 text-3xl font-semibold">80+</h1>
-                    <p className=" text-white">Happy Clients</p>
+                  <div className="">
+                    <h1 className="text-yellow-500 text-xl md:text-3xl font-semibold text-center lg:text-left">80+</h1>
+                    <p className="text-[12px] md:text-[16px] text-center text-white whitespace-nowrap">Happy Clients</p>
                   </div>
                 </div>
               </div>
@@ -135,7 +141,7 @@ const Hero = () => {
       <div>
         {/* Popup Modal */}
         {isOpen && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 mx-5">
             <div className="bg-[#121212] opacity-80 p-6 rounded-lg shadow-lg max-w-xl w-full">
               {/* Modal Content */}
               <h2 className="text-xl font-bold mb-2 text-white">{`Let's Work Together!`}</h2>
@@ -143,11 +149,11 @@ const Hero = () => {
                 {`Hi, I'm a passionate Front-End Developer with a strong focus on creating stunning and highly responsive web experiences. While my expertise lies in front-end development, I'm also deeply committed to mastering full-stack development, constantly enhancing my skills to deliver complete web solutions.`}
 
                 {`Recently, I successfully completed the Assignment Marketplace Hackathon 3 full-stack project under GIAIC, proving my ability to handle both front-end and back-end development challenges. Whether you need a sleek portfolio, a dynamic web app, or a fully functional full-stack project, I'm ready to bring your vision to life.`}
-                <br/><br/>
-                Why Work With Me?<br/>
-                ✅ Clean, Modern, and Responsive UI/UX<br/>
-                ✅ Performance-Optimized Web Applications<br/>
-                ✅ Passionate About Learning and Problem-Solving<br/>
+                <br /><br />
+                Why Work With Me?<br />
+                ✅ Clean, Modern, and Responsive UI/UX<br />
+                ✅ Performance-Optimized Web Applications<br />
+                ✅ Passionate About Learning and Problem-Solving<br />
                 ✅ Reliable, Detail-Oriented, and Committed to Deadlines
 
                 {`Let's collaborate to turn your ideas into reality! Reach out now, and let's create something extraordinary.`}
@@ -156,11 +162,11 @@ const Hero = () => {
 
               {/* Close Button */}
               <button
-              onClick={() => setIsOpen(false)}
-              className="w-full text-xl font-bold py-3 px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg transition"
-            >
-              Close
-            </button>
+                onClick={() => setIsOpen(false)}
+                className="w-full text-xl font-bold py-3 px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg transition"
+              >
+                Close
+              </button>
             </div>
           </div>
         )}

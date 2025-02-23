@@ -111,8 +111,8 @@ export default function CircularProgressCountUp({
             >
               <Image src={image} alt={title} width={30} height={30} />
             </CircularProgress>
-            <Typography className="text-[#FD6F00] text-lg font-medium">{value}%</Typography>
-            <h5 className="text-lg font-medium opacity-75">{title}</h5>
+            <Typography className="text-[#FD6F00] text-base md:text-lg whitespace-nowrap font-medium">{value}%</Typography>
+            <h5 className="text-base md:text-lg whitespace-nowrap font-medium opacity-75">{title}</h5>
           </div>
         </Stack>
       </Stack>
