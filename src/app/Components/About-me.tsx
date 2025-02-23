@@ -4,11 +4,11 @@ import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import Portrait1 from "../Public/Portrait1.png";
 
-import photoshop from "../../../public/photoshop.svg"
-import xd from "../../../public/xd.svg"
-import illustrator from "../../../public/illustrator.svg"
-import figma from "../../../public/figma.svg"
-import premiere from "../../../public/premiere.svg"
+import photoshop from "@/app/Public/photoshop.svg"
+import xd from "@/app/Public/xd.svg"
+import illustrator from "@/app/Public/illustrator.svg"
+import figma from "@/app/Public/figma.svg"
+import premiere from "@/app/Public/premiere.svg"
 
 import CircularProgressCountUp from '@/components/ui/CircularProgressCountUp';
 
