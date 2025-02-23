@@ -3,12 +3,6 @@ import React from 'react';
 import Image from "next/image";
 import { IoIosArrowDown } from "react-icons/io";
 import Portrait1 from "../Public/Portrait1.png";
-import figma1 from "../Public/figma.svg";
-import xd1 from "../Public/xd.svg";
-import photoshop1 from "../Public/photoshop.svg";
-import illustrator1 from "../Public/illustrator.svg";
-import premiere1 from "../Public/premiere.svg";
-
 
 import photoshop from "../../../public/photoshop.svg"
 import xd from "../../../public/xd.svg"
@@ -72,6 +66,7 @@ const Aboutme = () => {
                 <CircularProgressCountUp end={75} duration={1} image={illustrator} title={"Adobe Illustrator"}/>
                 <CircularProgressCountUp end={60} duration={1} image={premiere} title={"Adobe Premiere"}/>                
                 </div>
+                <p className='hidden'>{value}</p>
             </div>
         </section>
     );

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Portrait from "./Public/Portrait.png";
@@ -138,11 +138,11 @@ const Hero = () => {
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
             <div className="bg-[#121212] opacity-80 p-6 rounded-lg shadow-lg max-w-xl w-full">
               {/* Modal Content */}
-              <h2 className="text-xl font-bold mb-2 text-white">Let's Work Together!</h2>
+              <h2 className="text-xl font-bold mb-2 text-white">{`Let's Work Together!`}</h2>
               <p className="text-white mb-4">
-                Hi, I'm a passionate Front-End Developer with a strong focus on creating stunning and highly responsive web experiences. While my expertise lies in front-end development, I'm also deeply committed to mastering full-stack development, constantly enhancing my skills to deliver complete web solutions.
+                {`Hi, I'm a passionate Front-End Developer with a strong focus on creating stunning and highly responsive web experiences. While my expertise lies in front-end development, I'm also deeply committed to mastering full-stack development, constantly enhancing my skills to deliver complete web solutions.`}
 
-                Recently, I successfully completed the Assignment Marketplace Hackathon 3 full-stack project under GIAIC, proving my ability to handle both front-end and back-end development challenges. Whether you need a sleek portfolio, a dynamic web app, or a fully functional full-stack project, I'm ready to bring your vision to life.
+                {`Recently, I successfully completed the Assignment Marketplace Hackathon 3 full-stack project under GIAIC, proving my ability to handle both front-end and back-end development challenges. Whether you need a sleek portfolio, a dynamic web app, or a fully functional full-stack project, I'm ready to bring your vision to life.`}
                 <br/><br/>
                 Why Work With Me?<br/>
                 ✅ Clean, Modern, and Responsive UI/UX<br/>
@@ -150,7 +150,7 @@ const Hero = () => {
                 ✅ Passionate About Learning and Problem-Solving<br/>
                 ✅ Reliable, Detail-Oriented, and Committed to Deadlines
 
-                Let's collaborate to turn your ideas into reality! Reach out now, and let's create something extraordinary.
+                {`Let's collaborate to turn your ideas into reality! Reach out now, and let's create something extraordinary.`}
               </p>
               <p className="font-semibold pb-5">Whatsapp Me: 0311 3867522 </p>
 

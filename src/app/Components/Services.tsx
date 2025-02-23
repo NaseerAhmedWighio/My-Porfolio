@@ -1,6 +1,5 @@
 
 import Image from "next/image";
-import user from "../Public/user.svg";
 import ux from "../../../public/Icons/ux.png"
 import seo from "../../../public/Icons/seo.png"
 import graphics from "../../../public/Icons/graphics.png"
