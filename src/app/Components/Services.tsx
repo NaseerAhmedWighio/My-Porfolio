@@ -1,11 +1,11 @@
 
 import Image from "next/image";
-import ux from "../../../public/Icons/ux.png"
-import seo from "../../../public/Icons/seo.png"
-import graphics from "../../../public/Icons/graphics.png"
-import nextjs from "../../../public/Icons/nextjs.svg"
-import app from "../../../public/Icons/app.png"
-import web from "../../../public/Icons/web.png"
+import ux from "@/app/Public/Icons/ux.png"
+import seo from "@/app/Public/Icons/seo.png"
+import graphics from "@/app/Public/Icons/graphics.png"
+import nextjs from "@/app/Public/Icons/nextjs.svg"
+import app from "@/app/Public/Icons/app.png"
+import web from "@/app/Public/Icons/web.png"
 import React from 'react';
 
 export default function Services() {
