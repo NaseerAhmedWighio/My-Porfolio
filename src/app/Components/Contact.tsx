@@ -4,7 +4,7 @@ export default function Contact() {
             <div className="w-full h-auto bg-[#121212] px-4 py-10">
                 <div className="max-w-4xl mx-auto text-center space-y-6">
                     <h1 className="text-3xl font-semibold text-white">Contact me</h1>
-                    <p className="font-thin opacity-50 text-white">
+                    <p className="font-thin opacity-50 text-white mx-2">
                         Cultivating Connections: Reach Out and Connect with Me
                     </p>
                 </div>

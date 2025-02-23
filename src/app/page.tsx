@@ -27,13 +27,13 @@ const Hero = () => {
   return (
     <>
       <main
-        className="w-full h-auto bg-cover bg-center mt-20 opacity-100"
+        className="w-screen h-auto bg-cover bg-center mt-20 opacity-100"
         style={{ backgroundImage: `url(${bg3.src})` }}
       >
         <div>
           <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-28">
             {/* Text Section */}
-            <div id="info-text" className="flex flex-col items-center mb-10 lg:mb-0 lg:items-start">
+            <div id="info-text" className="w-screen flex flex-col items-center mb-10 lg:mb-0 lg:items-start">
               <div className="text-2xl sm:text-lg md:text-lg xl:text-3xl mb-2 text-center text-white"> <TypeAnimation
                 sequence={["Hi I'm", 1000, "Hi I am", 1000]}
                 wrapper="span"
@@ -92,13 +92,13 @@ const Hero = () => {
                 <button
                   onClick={() => setIsOpen(true)}
                   type="button"
-                  className="text-xl font-bold py-3 px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg"
+                  className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-6 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg"
                 >
                   Hire me
                 </button>
                 <button
                   type="button"
-                  className="text-xl font-bold py-3 px-6 sm:px-8 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
+                  className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-8 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
                   onClick={handleDownloadCV} // Use onClick handler
                 >
                   Download CV
@@ -106,21 +106,25 @@ const Hero = () => {
               </div>
 
               {/* Experience Section */}
-              <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 w-auto lg:w-[450px] lg:h-48 scale-75 sm:scale-90 md:scale-100">
+              <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 mx-5 md:mx-0 w-auto lg:w-[450px] lg:h-48 scale-50 md:scale-75 lg:scale-100">
                 <div className="flex justify-center items-center gap-10 ml-4 mr-4 text-lg md:text-xl">
-                  <div className="">
-                    <h1 className="text-yellow-500 text-xl md:text-3xl font-semibold text-center lg:text-left">5+</h1>
-                    <p className="text-[12px] md:text-[16px] text-center text-white whitespace-nowrap">Experiences</p>
+                  <div className="mx-1">
+                    <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">5+</h1>
+                    <p className="text-[16px] text-center text-white whitespace-nowrap">Experiences</p>
                   </div>
-                  <div className="w-[0.5px] h-36 opacity-70 bg-white"></div>
-                  <div className="">
-                    <h1 className="text-yellow-500 text-xl md:text-3xl font-semibold text-center lg:text-left">20+</h1>
-                    <p className="text-[12px] md:text-[16px] text-center text-white whitespace-nowrap">Projects done</p>
+                  <div className="w-[2px]">
+                  <div className="w-[0.5px] h-36 opacity-70 bg-white"/>
                   </div>
-                  <div className="w-[0.5px] h-36 opacity-70 bg-white"></div>
-                  <div className="">
-                    <h1 className="text-yellow-500 text-xl md:text-3xl font-semibold text-center lg:text-left">80+</h1>
-                    <p className="text-[12px] md:text-[16px] text-center text-white whitespace-nowrap">Happy Clients</p>
+                  <div className="mx-1">
+                    <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">20+</h1>
+                    <p className="text-[16px] text-center text-white whitespace-nowrap">Projects done</p>
+                  </div>
+                   <div className="w-[2px]">
+                  <div className="w-[0.5px] h-36 opacity-70 bg-white"/>
+                  </div>
+                  <div className="mx-1">
+                    <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">80+</h1>
+                    <p className="text-[16px] text-center text-white whitespace-nowrap">Happy Clients</p>
                   </div>
                 </div>
               </div>

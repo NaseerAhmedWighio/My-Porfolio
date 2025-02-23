@@ -15,6 +15,10 @@ import CircularProgressCountUp from '@/components/ui/CircularProgressCountUp';
 const Aboutme = () => {
     const [value, setValue] = React.useState(0);
 
+    const handleDownloadCV = () => {
+        window.open("./Resume.pdf", "_blank");
+      };
+
     React.useEffect(() => {
         let speed = 100; // Start mein fast speed
         let v = 0;
@@ -35,8 +39,8 @@ const Aboutme = () => {
             <div className="w-full h-auto bg-[#121212] space-y-12 py-8 px-4 md:px-8">
                 <div className="text-center space-y-6">
                     <h1 className="text-3xl font-semibold text-white">About Me</h1>
-                    <p className="font-thin opacity-50 text-white">
-                        User Interface and User Experience and Also video editing
+                    <p className="font-thin opacity-50 text-white mx-2">
+                        UI/UX Developer, Graphics & Video Designer.
                     </p>
                 </div>
                 <div className="flex flex-col lg:flex-row items-center lg:space-x-96 lg:mx-16 xl:mx-32 mt-5">
@@ -48,10 +52,12 @@ const Aboutme = () => {
                             A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code.
                         </p>
                         <br />
-                        <a href="./Resume.pdf" download ><button type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg flex items-center justify-between">
+                        <div className="flex justify-center lg:justify-start">
+                       <button onClick={handleDownloadCV} type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg flex items-center justify-between">
                             Download CV
                             <IoIosArrowDown className="ml-4" />
-                        </button></a>
+                        </button>
+                        </div>
                     </div>
                 </div>
                 <div className="md:flex justify-between mx-auto grid grid-cols-2 gap-10 mt-10">
