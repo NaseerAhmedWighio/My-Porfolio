@@ -103,7 +103,7 @@ const Hero = () => {
                 >
                   Hire me
                 </button>
-                <a href="/assests/cv/Resume.pdf">
+                {/* <a href="/assests/cv/Resume.pdf"> */}
                 <button
                   type="button"
                   className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-8 whitespace-nowrap hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
@@ -111,7 +111,7 @@ const Hero = () => {
                 >
                   Download CV
                 </button>
-                </a>
+                {/* </a> */}
               </div>
 
               {/* Experience Section */}

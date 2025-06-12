@@ -16,14 +16,14 @@ const Aboutme = () => {
     const [value, setValue] = React.useState(0);
 
 
-    const handleDownloadCV = () => {
-        const link = document.createElement("a");
-        link.href = "./Resume.pdf";
-        link.setAttribute("download", "Resume.pdf"); // Set download attribute
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link); // Clean up
-    };
+    // const handleDownloadCV = () => {
+    //     const link = document.createElement("a");
+    //     link.href = "/assests/cv/Resume.pdf";
+    //     link.setAttribute("download", "Resume.pdf"); // Set download attribute
+    //     document.body.appendChild(link);
+    //     link.click();
+    //     document.body.removeChild(link); // Clean up
+    // };
 
     React.useEffect(() => {
         let speed = 100; // Start mein fast speed
@@ -68,10 +68,16 @@ const Aboutme = () => {
                         </p>
                         <br />
                         <div className="flex justify-center lg:justify-start">
-                            <button onClick={handleDownloadCV} type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg whitespace-nowrap flex items-center justify-between">
+                            <a href="/assests/cv/Resume.pdf">
+                            {/* <a href="/src/app/Resume.pdf"> */}
+                            <button 
+                            // onClick={handleDownloadCV}
+                             type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg whitespace-nowrap flex items-center justify-between">
                                 Download CV
                                 <IoIosArrowDown className="ml-4" />
                             </button>
+                            </a>
+                            {/* </a> */}
                         </div>
                     </div>
                 </div>
