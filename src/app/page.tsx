@@ -24,7 +24,7 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/assests/cv/Resume.pdf";
+    link.href = "/public/assests/cv/Resume.pdf";
     link.setAttribute("download", "Resume.pdf"); // Set download attribute
     document.body.appendChild(link);
     link.click();

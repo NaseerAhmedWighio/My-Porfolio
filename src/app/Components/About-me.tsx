@@ -68,7 +68,7 @@ const Aboutme = () => {
                         </p>
                         <br />
                         <div className="flex justify-center lg:justify-start">
-                            <a href="/assests/cv/Resume.pdf">
+                            <a href="/public/assests/cv/Resume.pdf">
                             {/* <a href="/src/app/Resume.pdf"> */}
                             <button 
                             // onClick={handleDownloadCV}
