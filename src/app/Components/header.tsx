@@ -46,7 +46,7 @@ export default function Header() {
 
 
     return (
-        <header className='fixed top-0 w-screen z-50'>
+        <header className='fixed top-0 w-screen z-100'>
             <nav className="w-full bg-[#121212]">
                 <div className="flex items-center justify-between px-7 py-6 md:px-10">
                     {/* Logo */}
@@ -62,17 +62,17 @@ export default function Header() {
                     </div>
 
                     {/* Navigation Links (visible on large screens) */}
-                    <div className="hidden lg:flex gap-12 text-right">
-                        <a href="/" className={`text-2xl lg:text-xl ${activeSection === "/" ? "text-orange-600" : "text-white"
-                            } hover:text-orange-600 cursor-pointer`}>HOME</a>
-                        <a href='#Services' className={`text-2xl lg:text-xl ${activeSection === "Services" ? "text-orange-600" : "text-white"
-                            } hover:text-orange-600 cursor-pointer`}>SERVICES</a>
-                        <a href='#About' className={`text-2xl lg:text-xl ${activeSection === "About" ? "text-orange-600" : "text-white"
-                            } hover:text-orange-600 cursor-pointer`}>ABOUT ME</a>
-                        <a href="#Portfolio" className={`text-2xl lg:text-xl ${activeSection === "Portfolio" ? "text-orange-600" : "text-white"
-                            } hover:text-orange-600 cursor-pointer`}>PORTFOLIO</a>
-                        <a href="#Contact" className={`text-2xl lg:text-xl ${activeSection === "Contact" ? "text-orange-600" : "text-white"
-                            } hover:text-orange-600 cursor-pointer`}>CONTACT</a>
+                    <div className="hidden lg:flex lg:gap-6 xl:gap-12 lg:scale-100 xl:scale-90 text-center">
+                        <a href="/" className={`text-2xl lg:text-lg xl:text-xl whitespace-nowrap ${activeSection === "/" ? "text-orange-600" : "text-white"
+                            } hover:text-orange-600 cursor-pointer whitespace-nowrap`}>HOME</a>
+                        <a href='#Services' className={`text-2xl lg:text-lg xl:text-xl whitespace-nowrap ${activeSection === "Services" ? "text-orange-600" : "text-white"
+                            } hover:text-orange-600 cursor-pointer whitespace-nowrap`}>SERVICES</a>
+                        <a href='#About' className={`text-2xl lg:text-lg xl:text-xl whitespace-nowrap ${activeSection === "About" ? "text-orange-600" : "text-white"
+                            } hover:text-orange-600 cursor-pointer whitespace-nowrap`}>ABOUT ME</a>
+                        <a href="#Portfolio" className={`text-2xl lg:text-lg xl:text-xl whitespace-nowrap ${activeSection === "Portfolio" ? "text-orange-600" : "text-white"
+                            } hover:text-orange-600 cursor-pointer whitespace-nowrap`}>PORTFOLIO</a>
+                        <a href="#Contact" className={`text-2xl lg:text-lg xl:text-xl whitespace-nowrap ${activeSection === "Contact" ? "text-orange-600" : "text-white"
+                            } hover:text-orange-600 cursor-pointer whitespace-nowrap `}>CONTACT</a>
                     </div>
 
                     {/* Buttons (visible on large screens) */}
@@ -80,7 +80,7 @@ export default function Header() {
                         <button
                             onClick={() => setIsOpen(true)}
                             type="button"
-                            className="text-xl font-bold py-3 px-6 sm:px-14 hover:bg-white text-white hover:text-orange-600 bg-orange-600 rounded-lg"
+                            className="text-xl lg:text-lg xl:text-xl font-bold py-3 px-6 sm:px-14 hover:bg-white text-white whitespace-nowrap hover:text-orange-600 bg-orange-600 rounded-lg"
                         >
                             Hire me
                         </button>

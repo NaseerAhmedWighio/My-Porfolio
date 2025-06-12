@@ -65,7 +65,7 @@ export default function Contact() {
                         </div>
                     </div>
                     <div className="flex justify-center mt-8">
-                    <button type="submit" className="px-10 py-4 border-2 border-white hover:bg-white hover:text-black text-lg text-white rounded-lg">
+                    <button type="submit" className="px-10 py-2 border-2 border-white hover:bg-white hover:text-black text-lg text-white rounded-lg">
                         Send
                     </button>
                     </div>

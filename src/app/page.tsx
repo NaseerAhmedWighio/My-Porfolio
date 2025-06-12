@@ -14,6 +14,7 @@ import Contact from "./Components/Contact";
 import Aboutme from "./Components/About-me";
 import Portfolio from "./Components/Portfolio";
 import Services from "./Components/Services";
+import Gigs from "./Components/Gigs";
 import { useHireState } from "./Components/HireContext";
 // import Resume from "../../public/Resume.pdf"
 
@@ -33,13 +34,13 @@ const Hero = () => {
   return (
     <>
       <main
-        className="w-screen h-auto bg-cover bg-center mt-20 opacity-100"
+        className="w-full h-auto bg-cover bg-center mt-20 opacity-100"
         style={{ backgroundImage: `url(${bg3.src})` }}
       >
         <div>
           <div className="flex flex-col lg:flex-row items-center justify-between px-6 lg:px-20 py-28">
             {/* Text Section */}
-            <div id="info-text" className="w-screen flex flex-col items-center mb-10 lg:mb-0 lg:items-start">
+            <div id="info-text" className="w-screen flex flex-col items-center lg:items-start">
               <div className="text-2xl sm:text-lg md:text-lg xl:text-3xl mb-2 text-center text-white"> <TypeAnimation
                 sequence={["Hi I'm", 1000, "Hi I am", 1000]}
                 wrapper="span"
@@ -104,7 +105,7 @@ const Hero = () => {
                 </button>
                 <button
                   type="button"
-                  className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-8 hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
+                  className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-8 whitespace-nowrap hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
                   onClick={handleDownloadCV} // Use onClick handler
                 >
                   Download CV
@@ -112,7 +113,7 @@ const Hero = () => {
               </div>
 
               {/* Experience Section */}
-              <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 mx-5 md:mx-0 w-auto lg:w-[450px] lg:h-48 scale-50 md:scale-75 lg:scale-100">
+              <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 mx-5 md:mx-0 w-auto lg:w-[550px] lg:h-48 scale-50 md:scale-75 lg:scale-100">
                 <div className="flex justify-center items-center gap-10 ml-4 mr-4 text-lg md:text-xl">
                   <div className="mx-1">
                     <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">5+</h1>
@@ -182,6 +183,7 @@ const Hero = () => {
         )}
       </div>
       <Services />
+      <Gigs />
       <Aboutme />
       <Portfolio />
       <Contact />
