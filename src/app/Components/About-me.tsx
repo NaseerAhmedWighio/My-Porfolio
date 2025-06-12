@@ -68,8 +68,7 @@ const Aboutme = () => {
                         </p>
                         <br />
                         <div className="flex justify-center lg:justify-start">
-                            <a href="/public/assests/cv/Resume.pdf">
-                            {/* <a href="/src/app/Resume.pdf"> */}
+                            <a href="/Resume.pdf" download>
                             <button 
                             // onClick={handleDownloadCV}
                              type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg whitespace-nowrap flex items-center justify-between">
@@ -77,7 +76,6 @@ const Aboutme = () => {
                                 <IoIosArrowDown className="ml-4" />
                             </button>
                             </a>
-                            {/* </a> */}
                         </div>
                     </div>
                 </div>
