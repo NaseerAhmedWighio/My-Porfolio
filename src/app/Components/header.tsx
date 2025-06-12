@@ -46,7 +46,7 @@ export default function Header() {
 
 
     return (
-        <header className='fixed top-0 w-screen z-100'>
+        <header className='fixed top-0 w-screen z-50'>
             <nav className="w-full bg-[#121212]">
                 <div className="flex items-center justify-between px-7 py-6 md:px-10">
                     {/* Logo */}
