@@ -24,7 +24,7 @@ const Hero = () => {
 
   const handleDownloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
+    link.href = "/assests/cv/Resume.pdf";
     link.setAttribute("download", "Resume.pdf"); // Set download attribute
     document.body.appendChild(link);
     link.click();
@@ -103,6 +103,7 @@ const Hero = () => {
                 >
                   Hire me
                 </button>
+                <a href="/assests/cv/Resume.pdf">
                 <button
                   type="button"
                   className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-8 whitespace-nowrap hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
@@ -110,6 +111,7 @@ const Hero = () => {
                 >
                   Download CV
                 </button>
+                </a>
               </div>
 
               {/* Experience Section */}
