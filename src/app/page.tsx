@@ -37,24 +37,31 @@ const Hero = () => {
     fetchResume();
   }, []);
 
-  const handleDownloadCV = () => {
+  const handleDownloadCV = async () => {
     const finalResumeUrl = resumeUrl || "/Resume.pdf";
-    const downloadName = resumeUrl ? "resume.pdf" : "Resume.pdf";
-    const downloadUrl = resumeUrl ? `${resumeUrl}?dl=resume.pdf` : "/Resume.pdf";
 
-    // Open in new tab
-    window.open(finalResumeUrl, "_blank");
-
-    // Download logic
-    const link = document.createElement("a");
-    link.href = downloadUrl;
-    link.setAttribute("download", downloadName);
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    if (!resumeUrl) {
-      console.warn("Resume URL not found. Downloading static fallback.");
+    try {
+      // Fetch the PDF as a blob
+      const response = await fetch(finalResumeUrl);
+      if (!response.ok) throw new Error("Failed to fetch PDF");
+      
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      
+      // Create download link
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.setAttribute("download", resumeUrl ? "resume.pdf" : "Resume.pdf");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Clean up blob URL
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error("Error downloading CV:", error);
+      // Fallback: open in new tab
+      window.open(finalResumeUrl, "_blank");
     }
   };
 
@@ -130,15 +137,13 @@ const Hero = () => {
                 >
                   Hire me
                 </button>
-                <a href="/Resume.pdf" download>
                 <button
                   type="button"
                   className="text-lg md:text-xl font-bold py-2 md:py-3 px-4 md:px-8 whitespace-nowrap hover:bg-orange-600 text-white hover:text-white border-2 border-orange-600 rounded-lg"
-                  onClick={handleDownloadCV} // Use onClick handler
+                  onClick={handleDownloadCV}
                 >
                   Download CV
                 </button>
-                </a>
               </div>
 
               {/* Experience Section */}
