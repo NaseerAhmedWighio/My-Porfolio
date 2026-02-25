@@ -16,14 +16,20 @@ const Aboutme = () => {
     const [value, setValue] = React.useState(0);
 
 
-    // const handleDownloadCV = () => {
-    //     const link = document.createElement("a");
-    //     link.href = "/assests/cv/Resume.pdf";
-    //     link.setAttribute("download", "Resume.pdf"); // Set download attribute
-    //     document.body.appendChild(link);
-    //     link.click();
-    //     document.body.removeChild(link); // Clean up
-    // };
+    const handleDownloadCV = () => {
+        const resumePath = "./Resume.pdf";
+
+        // Open in new tab
+        window.open(resumePath, "_blank");
+
+        // Download logic
+        const link = document.createElement("a");
+        link.href = resumePath;
+        link.setAttribute("download", "Resume.pdf"); // Set download attribute
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up
+    };
 
     React.useEffect(() => {
         let speed = 100; // Start mein fast speed
@@ -49,37 +55,31 @@ const Aboutme = () => {
                         UI/UX Developer, Graphics & Video Designer.
                     </p>
                 </div>
-                <div className="flex flex-col lg:flex-row items-center lg:space-x-96 lg:mx-16 xl:mx-32 mt-5">
-                    <div className="flex justify-center lg:justify-start w-full lg:w-auto mb-8 lg:mb-0">
-                        <Image src={Portrait1} className="w-[250px] h-auto lg:w-[400px] xl:w-[500px]" alt="portrait" />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch w-full">
+                    <div className="flex justify-center items-center w-full">
+                        <Image src={Portrait1} className="w-full max-w-[300px] lg:max-w-[330px] xl:max-w-[450px] h-auto object-contain" alt="portrait" />
                     </div>
-                    <div className="w-full lg:w-[280px] xl:w-[600px] space-y-6 text-center lg:text-left px-4">
-                        <p className="text-justify text-lg opacity-80 tracking-wide">
-                            {/* A software engineer, the modern-day architect of digital realms, navigates the ethereal landscapes of code, sculpting intangible structures that shape our technological world. With fingers poised over keyboards like virtuoso pianists, they compose symphonies of logic, their minds a labyrinth of algorithms and solutions. Debugging becomes a noble pursuit, unraveling the mysteries hidden within the tangled webs of code. */}
-                            <b>{`Hi, I'm Naseer Ahmed — Full-Stack Web Developer`}</b>
-                            <br/>I craft modern, responsive, and high-performance websites using technologies like React, Next.js, TypeScript, HTML, CSS, and Tailwind CSS. I work with individuals, startups, and businesses to build websites that not only look exceptional but also deliver powerful results.
-                            <br/>With a strong focus on user experience, performance, and scalability, I provide:
-                            <br/><>Full-Stack Web Development</>
-                            <>UI/UX Design and Optimization</>
-                            <>Bug Fixing and Code Refactoring</>
-                            <>Clean, Maintainable, and SEO-Friendly Code</>
-                            <br/>My goal is to help you stand out online through fast, accessible, and conversion-focused websites. I value quality work, clear communication, and long-term collaboration.
-                            <br/>{`Let’s bring your vision to life and build a website that drives real impact.`}
-                        </p>
-                        <br />
-                        <div className="flex justify-center lg:justify-start">
-                            <a href="/Resume.pdf" download>
-                            <button 
-                            // onClick={handleDownloadCV}
-                             type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg whitespace-nowrap flex items-center justify-between">
+                    <div className="w-full flex flex-col justify-between pr-2 text-center lg:text-left">
+                        <div className="space-y-6">
+                            <p className="text-justify text-lg lg:text-xl opacity-80 tracking-wide">
+                                I am a Full Stack Web Developer and Software Engineer specializing in Next.js, TypeScript, Tailwind CSS, and Python, building scalable, high performance web applications from concept to deployment. I design seamless frontend experiences, develop secure backend APIs, implement custom authentication systems, and manage dynamic content with Sanity CMS.
+                            </p>
+                            <p className="text-justify text-lg lg:text-xl opacity-80 tracking-wide">
+                                With experience in AI agents, automation workflows, Docker, Kubernetes, and Vercel deployment, I create cloud ready, production grade systems that are efficient, secure, and scalable. I focus on clean architecture, performance optimization, and modern development practices to ensure long term maintainability.
+                            </p>
+                            <p className="text-justify text-lg lg:text-xl opacity-80 tracking-wide">
+                                A software engineer, the modern-day architect of digital realms, navigates the landscapes of code, sculpting intangible structures that shape our technological world. With logic as my language and problem solving as my craft, I transform complex challenges into elegant, reliable digital solutions.
+                            </p>
+                        </div>
+                        <div className="flex justify-center lg:justify-start mt-8">
+                            <button onClick={handleDownloadCV} type="button" className="text-lg font-bold py-3 px-7 bg-orange-600 rounded-lg whitespace-nowrap flex items-center justify-between">
                                 Download CV
                                 <IoIosArrowDown className="ml-4" />
                             </button>
-                            </a>
                         </div>
                     </div>
                 </div>
-                <div className="md:flex justify-between mx-auto grid grid-cols-2 gap-10 mt-10">
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 mt-16 w-full px-4">
                     {/* {[figma1, xd1, photoshop1, illustrator1, premiere1].map((icon, index) => (
                         <Image key={index} src={icon} className="w-20 h-20 md:w-28 md:h-28 lg:w-40 lg:h-40" alt="logo" />
                     ))}

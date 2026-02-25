@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import {useEffect, useState} from "react";
+import {client} from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import Portrait from "./Public/Portrait.png";
@@ -20,15 +22,40 @@ import { useHireState } from "./Components/HireContext";
 
 const Hero = () => {
   const { isOpen, setIsOpen } = useHireState();
+  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
 
+ useEffect(() => {
+    const fetchResume = async () => {
+      try {
+        const query = `*[_type == "resume"][0].resumes[0].resumeFile.asset->url`;
+        const url = await client.fetch(query);
+        setResumeUrl(url);
+      } catch (error) {
+        console.error("Error fetching resume:", error);
+      }
+    };
+    fetchResume();
+  }, []);
 
   const handleDownloadCV = () => {
+    const finalResumeUrl = resumeUrl || "/Resume.pdf";
+    const downloadName = resumeUrl ? "resume.pdf" : "Resume.pdf";
+    const downloadUrl = resumeUrl ? `${resumeUrl}?dl=resume.pdf` : "/Resume.pdf";
+
+    // Open in new tab
+    window.open(finalResumeUrl, "_blank");
+
+    // Download logic
     const link = document.createElement("a");
-    link.href = "/Resume.pdf";
-    link.setAttribute("download", "Resume.pdf"); // Set download attribute
+    link.href = downloadUrl;
+    link.setAttribute("download", downloadName);
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link); // Clean up
+    document.body.removeChild(link);
+
+    if (!resumeUrl) {
+      console.warn("Resume URL not found. Downloading static fallback.");
+    }
   };
 
   return (
@@ -115,25 +142,25 @@ const Hero = () => {
               </div>
 
               {/* Experience Section */}
-              <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 mx-5 md:mx-0 w-auto lg:w-[550px] lg:h-48 scale-50 md:scale-75 lg:scale-100">
-                <div className="flex justify-center items-center gap-10 ml-4 mr-4 text-lg md:text-xl">
+                <div className="bg-[#1b1b1b] opacity-40 rounded-xl p-6 mx-5 md:mx-0 w-auto lg:w-[400px] xl:w-[550px] lg:h-32 scale-75 md:scale-90 lg:scale-100">
+                <div className="flex justify-between items-center gap-5 text-base md:text-lg">
                   <div className="mx-1">
-                    <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">5+</h1>
-                    <p className="text-[16px] text-center text-white whitespace-nowrap">Experiences</p>
+                    <h1 className="text-yellow-500 text-xl md:text-2xl font-semibold text-center lg:text-left">5+</h1>
+                    <p className="text-[12px] lg:text-[14px] text-center text-white whitespace-nowrap">Experiences</p>
                   </div>
-                  <div className="w-[2px]">
-                  <div className="w-[0.5px] h-36 opacity-70 bg-white"/>
-                  </div>
-                  <div className="mx-1">
-                    <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">20+</h1>
-                    <p className="text-[16px] text-center text-white whitespace-nowrap">Projects done</p>
-                  </div>
-                   <div className="w-[2px]">
-                  <div className="w-[0.5px] h-36 opacity-70 bg-white"/>
+                  <div className="w-[1px]">
+                    <div className="w-[0.5px] h-20 opacity-70 bg-white" />
                   </div>
                   <div className="mx-1">
-                    <h1 className="text-yellow-500 text-2xl md:text-3xl font-semibold text-center lg:text-left">80+</h1>
-                    <p className="text-[16px] text-center text-white whitespace-nowrap">Happy Clients</p>
+                    <h1 className="text-yellow-500 text-xl md:text-2xl font-semibold text-center lg:text-left">20+</h1>
+                    <p className="text-[12px] lg:text-[14px] text-center text-white whitespace-nowrap">Projects done</p>
+                  </div>
+                  <div className="w-[1px]">
+                    <div className="w-[0.5px] h-20 opacity-70 bg-white" />
+                  </div>
+                  <div className="mx-1">
+                    <h1 className="text-yellow-500 text-xl md:text-2xl font-semibold text-center lg:text-left">80+</h1>
+                    <p className="text-[12px] lg:text-[14px] text-center text-white whitespace-nowrap">Happy Clients</p>
                   </div>
                 </div>
               </div>

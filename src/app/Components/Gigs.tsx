@@ -170,7 +170,7 @@ export default function GigPackages() {
     return (
         <div className="max-w-full mx-auto px-4 py-10 bg-[#121212]">
             <h2 className="text-3xl font-bold text-center mb-10">{gig.title}</h2>
-            <div className="flex flex-col md:flex-row justify-center md:items-stretch items-center gap-6">
+            <div className="flex flex-col md:flex-row justify-center md:items-stretch items-center gap-6 md:scale-75 lg:scale-100">
 
                 {tiers.map((tier) => {
                     const pkg = packages[tier];

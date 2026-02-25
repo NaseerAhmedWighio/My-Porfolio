@@ -20,8 +20,11 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Potfolio Website",
+  title: "Naseer Ahmed Wighio",
   description: "Naseer's Portfolio Website",
+    icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({
