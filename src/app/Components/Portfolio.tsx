@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect, useState, useRef } from "react";
 import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import type { NavigationOptions } from "swiper/types";  // Import from swiper/types
+import type { NavigationOptions } from "swiper/types";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -21,7 +21,7 @@ interface Project {
   description?: string;
 }
 
-const query = `*[_type == "project"]{
+const projectsQuery = `*[_type == "project"]{
   _id,
   title,
   "slug": slug.current,
@@ -31,23 +31,47 @@ const query = `*[_type == "project"]{
   description
 }`;
 
+const categoriesQuery = `*[_type == "project"] | order(category asc) { category }`;
+
 export default function Portfolio() {
   const [projects, setProjects] = useState<Project[]>([]);
+  const [categories, setCategories] = useState<string[]>(["All"]);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
+  const [filteredProjects, setFilteredProjects] = useState<Project[]>([]);
   const swiperRef = useRef<SwiperRef>(null);
   const prevButtonRef = useRef<HTMLButtonElement | null>(null);
   const nextButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchData = async () => {
       try {
-        const data = await client.fetch(query);
-        setProjects(data);
+        const [projectsData, categoriesData] = await Promise.all([
+          client.fetch<Project[]>(projectsQuery),
+          client.fetch<{ category: string }[]>(categoriesQuery),
+        ]);
+
+        setProjects(projectsData);
+
+        // Extract unique categories and add "All" at the beginning
+        const uniqueCategories = Array.from(
+          new Set(categoriesData.map((item) => item.category))
+        ).filter(Boolean);
+        setCategories(["All", ...uniqueCategories]);
       } catch (error) {
-        console.error("Error fetching projects:", error);
+        console.error("Error fetching data:", error);
       }
     };
-    fetchProjects();
+    fetchData();
   }, []);
+
+  useEffect(() => {
+    // Filter projects based on selected category
+    if (selectedCategory === "All") {
+      setFilteredProjects(projects);
+    } else {
+      setFilteredProjects(projects.filter((project) => project.category === selectedCategory));
+    }
+  }, [selectedCategory, projects]);
 
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -61,8 +85,8 @@ export default function Portfolio() {
 
       if (prevButtonRef.current && nextButtonRef.current) {
         if (swiper.params.navigation) {
-          (swiper.params.navigation as NavigationOptions).prevEl = prevButtonRef.current; // Type assertion
-          (swiper.params.navigation as NavigationOptions).nextEl = nextButtonRef.current; // Type assertion
+          (swiper.params.navigation as NavigationOptions).prevEl = prevButtonRef.current;
+          (swiper.params.navigation as NavigationOptions).nextEl = nextButtonRef.current;
           swiper.navigation.init();
           swiper.navigation.update();
         }
@@ -82,7 +106,7 @@ export default function Portfolio() {
         });
       });
     }
-  }, [projects]);
+  }, [filteredProjects]);
 
   return (
     <section id="Portfolio">
@@ -90,8 +114,16 @@ export default function Portfolio() {
         <div className="space-y-6 text-center">
           <h1 className="text-3xl font-semibold text-white">Portfolio</h1>
           <div className="flex flex-wrap justify-center gap-4 mt-2 overflow-x-auto">
-            {["All", "Website Design", "App Mobile", "App Desktop", "Branding"].map((category) => (
-              <button key={category} className="px-6 py-3 bg-[#1b1b1b] text-white hover:bg-orange-600 rounded-lg">
+            {categories.map((category) => (
+              <button
+                key={category}
+                onClick={() => setSelectedCategory(category)}
+                className={`px-6 py-3 rounded-lg transition ${
+                  selectedCategory === category
+                    ? "bg-orange-600 text-white"
+                    : "bg-[#1b1b1b] text-white hover:bg-orange-600"
+                }`}
+              >
                 {category}
               </button>
             ))}
@@ -140,7 +172,7 @@ export default function Portfolio() {
               });
             }}
           >
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <SwiperSlide key={project.slug} className="!w-[65vw] md:!w-[50vw] lg:!w-[40vw] flex justify-center hover:scale-105">
                 <div className="rounded-lg shadow-lg w-full max-w-[600px] transition-transform mx-auto">
                   <a href={project.link} target="_blank" rel="noopener noreferrer">

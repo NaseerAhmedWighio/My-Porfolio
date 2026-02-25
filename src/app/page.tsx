@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import {useEffect, useState} from "react";
-import {client} from "@/sanity/lib/client";
 import Image from "next/image";
 import Link from "next/link";
 import Portrait from "./Public/Portrait.png";
@@ -22,53 +20,34 @@ import { useHireState } from "./Components/HireContext";
 
 const Hero = () => {
   const { isOpen, setIsOpen } = useHireState();
-  const [resumeUrl, setResumeUrl] = useState<string | null>(null);
-
- useEffect(() => {
-    const fetchResume = async () => {
-      try {
-        const query = `*[_type == "resume"][0].resumes[0].resumeFile.asset->url`;
-        const url = await client.fetch(query);
-        setResumeUrl(url);
-      } catch (error) {
-        console.error("Error fetching resume:", error);
-      }
-    };
-    fetchResume();
-  }, []);
-
+  
   const handleDownloadCV = async () => {
-    const finalResumeUrl = resumeUrl || "/Resume.pdf";
-
     try {
-      // Fetch the PDF as a blob
-      const response = await fetch(finalResumeUrl);
-      if (!response.ok) throw new Error("Failed to fetch PDF");
-      
+      const response = await fetch('/api/resume');
       const blob = await response.blob();
-      const blobUrl = window.URL.createObjectURL(blob);
+      const url = window.URL.createObjectURL(blob);
       
-      // Create download link
-      const link = document.createElement("a");
-      link.href = blobUrl;
-      link.setAttribute("download", resumeUrl ? "resume.pdf" : "Resume.pdf");
+      // Download the file
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'resume.pdf';
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       
-      // Clean up blob URL
-      window.URL.revokeObjectURL(blobUrl);
+      // Also open in new tab
+      window.open(url, '_blank');
+      
+      window.URL.revokeObjectURL(url);
     } catch (error) {
-      console.error("Error downloading CV:", error);
-      // Fallback: open in new tab
-      window.open(finalResumeUrl, "_blank");
+      console.error('Error downloading resume:', error);
     }
   };
 
   return (
     <>
       <main
-        className="w-full h-auto bg-cover bg-center mt-20 opacity-100"
+        className="w-full h-auto bg-cover bg-center opacity-100"
         style={{ backgroundImage: `url(${bg3.src})` }}
       >
         <div>
