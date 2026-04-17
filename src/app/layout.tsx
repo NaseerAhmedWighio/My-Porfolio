@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/app/Components/header";
 import Footer from "@/app/Components/footer"
 import { HireProvider } from "./Components/HireContext";
+import { Analytics } from "@vercel/analytics/next"
 
 
 const geistSans = localFont({
@@ -42,6 +43,7 @@ export default function RootLayout({
         {children}
         </HireProvider>
         <Footer />
+        <Analytics/>
       </body>
     </html>
   );
